@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ${APP_NAME:oauth}
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/oauthdb}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:password123}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Ov23likYhcn02UejRusd
+            client-secret: 157b855d1da58e3928ddf20291e4c2e6cd2a273c
+logging:
+  level:
+      org:
+        springframework:
+          security: TRACE
